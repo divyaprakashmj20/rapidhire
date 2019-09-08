@@ -1,0 +1,75 @@
+.logoHolder{
+    width: 90%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    transition: 0.3s;
+    padding: 5%
+}
+
+.logo{
+    flex: 1 1 30%;
+    max-width: 30%;
+    margin-right: 5%;
+}
+
+.menu-container{
+    max-width: 49%;
+    flex: 1 1 40%;
+    display: flex;
+}
+
+.menu-container-mob{
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 61%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    padding-top: 14px;
+    background-color: white;
+    box-shadow: -6px 3px 14px #1E274C;
+    transition: 0.3s;
+    transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+
+}
+
+.menu-overlay{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    background-color: #1E274C;
+    z-index: 0;
+}
+
+
+
+.menu-items{
+    color: white;
+    flex: 1 1 20%;
+    margin-right: 10%;
+    font-size: 1.2vw;
+    font-family: serif;
+}
+
+.menu-items-mob{
+    color: #827777;
+    margin-top: 13%;
+    font-size: 3vw;
+    text-align: center;
+    font-family: serif;
+}
+
+.hamburger-menu{
+    color: white;
+    font-size: 4vw;
+    margin-right: 4%;
+    margin-left: 2%;
+}
