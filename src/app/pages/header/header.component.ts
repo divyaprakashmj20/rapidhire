@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { HeaderNavigationService } from 'src/app/core/services/header-navigation.service';
 
 @Component({
   selector: 'app-header',
@@ -10,9 +11,10 @@ export class HeaderComponent implements OnInit {
   public menuOpen = false;
   // public mobile: 922;
 
-  constructor() {}
+  constructor( private headerNavigationService: HeaderNavigationService ) {}
 
   ngOnInit() {
+
     this.innerWidth = window.innerWidth;
     console.log(this.innerWidth);
   }
@@ -24,7 +26,7 @@ export class HeaderComponent implements OnInit {
       document.body.scrollTop > 50 ||
       document.documentElement.scrollTop > 50
     ) {
-      document.getElementById('logoHolder').style.padding = '1%';
+      document.getElementById('logoHolder').style.padding = '2%';
       document.getElementById('logoHolder').style.width = '98%';
     } else {
       document.getElementById('logoHolder').style.padding = '5%';
@@ -47,5 +49,11 @@ export class HeaderComponent implements OnInit {
     } else if (!this.menuOpen) {
       return 'translateX(-100%)';
     }
+  }
+
+  navToTab(tab){
+    console.log(tab);
+      this.headerNavigationService.tab(tab);
+      this.menuOpen = !this.menuOpen;
   }
 }

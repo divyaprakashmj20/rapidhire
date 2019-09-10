@@ -4,9 +4,9 @@
     <i *ngIf="innerWidth < 912 " class="fas fa-bars hamburger-menu" (click)="menuOpen = !menuOpen"></i>
     <img [ngClass]="(innerWidth < 912)?'logo':'logo'" src="../../../assets/Logo_new.png" />
     <div [ngClass]="(innerWidth < 912)?'menu-container-mob':'menu-container'"  [style.box-shadow]="(innerWidth<912 && menuOpen)? '-6px 3px 14px #1E274C' : 'none'" [style.transform]="menuContainerNav()" >
-    <span [ngClass]="(innerWidth < 912)?'menu-items-mob':'menu-items'">Our Company</span>
-    <span [ngClass]="(innerWidth < 912)?'menu-items-mob':'menu-items'">Client Solutions</span>
-    <span [ngClass]="(innerWidth < 912)?'menu-items-mob':'menu-items'">Sustainability</span>
-    <span [ngClass]="(innerWidth < 912)?'menu-items-mob':'menu-items'">Why RH</span>
+    <span [ngClass]="(innerWidth < 912)?'menu-items-mob':'menu-items'" (click)="navToTab('ourcompany')">Our Company</span>
+    <span [ngClass]="(innerWidth < 912)?'menu-items-mob':'menu-items'" (click)="navToTab('clientsolutions')">Client Solutions</span>
+    <span [ngClass]="(innerWidth < 912)?'menu-items-mob':'menu-items'" (click)="navToTab('sustainability')">Sustainability</span>
+    <span [ngClass]="(innerWidth < 912)?'menu-items-mob':'menu-items'" (click)="navToTab('whyrh')">Why RH</span>
     </div>
   </div>
